@@ -52,4 +52,4 @@ class HashTable:
         raise Exception("Hashmap full")
 
 t1=HashTable()
-print(t1.get_prob_range(4))cd birthc
+print(t1.get_prob_range(4))
