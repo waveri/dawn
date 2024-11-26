@@ -110,10 +110,10 @@ class BinarySearchTreeNode:
     def delete_exer(self,val):
         if val < self.data:
             if self.left:
-                self.left=self.left.delete(val)
+                self.left=self.left.delete_exer(val)
         elif val > self.data:
             if self.right:
-                self.right:self.right.delete(val)
+                self.right:self.right.delete_exer(val)
         else:
             if self.left is None and self.right is None:
                 return None
@@ -124,7 +124,7 @@ class BinarySearchTreeNode:
 
             max_val=self.left.find_max()
             self.data=max_val
-            self.left=self.left.delete(max_val)
+            self.left=self.left.delete_exer(max_val)
 
 def build_tree(elements):
     root=BinarySearchTreeNode(elements[0])
